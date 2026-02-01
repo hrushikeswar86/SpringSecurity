@@ -32,7 +32,7 @@ public class AuthController {
 		return authService.register(regDto);
 	}
 	
-	@GetMapping("/login")
+	@PostMapping("/login")
 	public String login(@RequestBody LoginDto loginDto) {
 		logger.info(loginDto.getEmail());
 		Employee e=authService.authenicate(loginDto);
